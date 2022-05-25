@@ -1,6 +1,18 @@
 version: 1
+env:
+  variables:
+    HUGOVERSION: v0.99.1
+    HUGOINSTALL: hugo_extended_0.99.1_Linux-64bit.tar.gz
 frontend:
   phases:
+    # IMPORTANT - Please verify your build commands
+    preBuild:
+      commands:
+        - wget https://github.com/gohugoio/hugo/releases/download/$HUGOVERSION/$HUGOINSTALL
+        - tar -xf $HUGOINSTALL
+        - mv hugo /usr/bin/hugo
+        - rm -rf $HUGOINSTALL
+        - hugo version
     build:
       commands:
         - hugo
@@ -8,5 +20,3 @@ frontend:
     baseDirectory: public
     files:
       - '**/*'
-  cache:
-    paths: []
