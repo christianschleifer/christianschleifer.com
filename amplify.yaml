@@ -2,7 +2,8 @@ version: 1
 frontend:
   phases:
     build:
-      commands: hugo
+      commands:
+        - hugo
   artifacts:
     baseDirectory: public
     files:
