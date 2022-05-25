@@ -1,0 +1,51 @@
+baseURL: "https://self-taught-developer.com"
+theme: "PaperMod"
+paginate: 5
+title: Self-taught developer
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+
+menu:
+  main:
+    - name: Tags
+      url: tags/
+      weight: 1
+    - name: Search
+      url: search/
+      weight: 2
+    - name: Imprint
+      url: imprint/
+      weight: 3
+    - name: Privacy Policy
+      url: privacy-policy/
+      weight: 4
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # is necessary
+
+params:
+  env: production
+  author: Christian Schleifer
+
+  defaultTheme: auto
+  ShowReadingTime: true
+  displayFullLangName: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowToc: true
+
+  homeInfoParams:
+    Title: "Self-taught developer"
+    Content: >
+      Welcome to my blog. My name is Christian. I'm a 28-years-old software engineer living in Munich. I studied medicine and 
+      have never undergone a formal computer science education. In this blog I want to write about tech and computer science concepts
+      I'm currently learning about. I also want to provide some guidance on how to become a self-taught developer who 
+      doesn't scare away from looking under the hood of abstractions.
