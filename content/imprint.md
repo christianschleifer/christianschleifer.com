@@ -12,7 +12,7 @@ Deutschland
 
 #### Kontakt
 
-Email: info@self-taught-developer.com  
+Email: christianschleifer@gmx.de
 Telefon: 0176 84880604
 
 #### Verantwortlich für den Inhalt gem. §55 Abs. 2 RStV
