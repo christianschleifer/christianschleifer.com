@@ -32,7 +32,7 @@ DNS or network.
 Definitely no introductory book to the Java programming language. But as soon as you have learnt the basic syntax of
 Java, I'd highly recommend reading the book. Joshua Bloch is an industry expert who has taken part in designing and
 implementing Java platform features. Nevertheless, the book is written in an easily understandable language. True
-experts can express complex problems with simples words!
+experts can express complex problems with simple words!
 
 ## Java Concurrency in Practice: Brian Goetz
 
