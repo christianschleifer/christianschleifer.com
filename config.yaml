@@ -29,14 +29,14 @@ sitemap:
 
 menu:
   main:
-    - name: Imprint
-      url: "/imprint/"
-      weight: 1
-    - name: Privacy Policy
-      url: "/privacy-policy/"
-      weight: 2
     - name: About
       url: "/about/"
+      weight: 1
+    - name: Imprint
+      url: "/imprint/"
+      weight: 2
+    - name: Privacy Policy
+      url: "/privacy-policy/"
       weight: 3
 
 markup:
