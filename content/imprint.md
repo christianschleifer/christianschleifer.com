@@ -1,6 +1,5 @@
 ---
 title: "Impressum"
-searchHidden: true
 ---
 
 #### Angaben gemäß §5 TMG

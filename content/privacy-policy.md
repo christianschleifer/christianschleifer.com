@@ -1,6 +1,5 @@
 ---
 title: "Datenschutzerklärung"
-searchHidden: true
 ---
 
 #### Allgemeiner Hinweis und Pflichtinformationen
