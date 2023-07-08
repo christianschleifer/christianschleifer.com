@@ -1,43 +1,41 @@
 ---
 title: "Top 5 Programming and Computer Science Books 2022"
-title: "My top 5 books on programming and computer science 2022"
 date: "2023-01-01"
 description: "List of my top 5 books on programming and computer science at the end of the year 2022."
-tags: ["programming books", "computer science", "top-5"]
+tags: [ "programming books", "computer science", "top-5" ]
 ---
 
 ## Designing Data-Intensive Applications: Martin Kleppmann
 
-If you want to learn the ins and outs of data handling in modern, distributed systems, look no further. Martin Kleppmann
-does an incredible job at explaining which tradeoffs you'll have to make with which data store.
-Especially the "Part II. Distributed Data" is truly enlightening.
+If you're eager to gain a comprehensive understanding of data handling in modern distributed systems, look no further.
+Martin Kleppmann does an exceptional job of elucidating the tradeoffs you'll encounter with different data storage
+options. Part II, "Distributed Data," is particularly enlightening.
 
 ## Operating Systems - Three Easy Pieces: Remzi H. Arpaci-Dusseau, Andrea C. Arpaci-Dusseau
 
-I cannot but admire the authors on their ability to convey complex topics in an understandable way. Having structured
-the book into three sections - Virtualization, Concurrency and Persistence - Remzi and Andrea Arpaci-Dusseau dive deep
-on how to securely share computer hardware across multiple programs, the pitfalls of running things on multiple
-processors and the challenges involved in persisting data to disk. This is your go-to book if you sometimes find
-yourself `strace`ing programs, and you want to know what actually happens there.
+I can't help but admire the authors' ability to explain complex topics in an accessible manner. The book is divided into
+three sections — Virtualization, Concurrency, and Persistence — and delves deeply into securely sharing computer
+hardware
+among multiple programs, the challenges of multiprocessing, and data persistence. This is your go-to resource if you
+often find yourself scrutinizing program traces and want to uncover what's really happening.
 
 ## Computer Networking - A Top-Down Approach: James Kurose, Keith Ross
 
-Computer networking made easy. Easy but not superficial! In fact, this book explores the details of the protocols
-building the foundation for computer networks and the Internet in particular.
-I cannot tell you how many times the knowledge gained from this book has saved my a** at work. After all, it's always
-DNS or network.
+Get ready for an easy-to-understand journey through the world of computer networking. However, don't mistake its
+simplicity for superficiality! The book delves into the intricacies of the protocols that underpin computer networks,
+with a particular focus on the Internet. The knowledge gained from this book has been invaluable to me countless times,
+especially when troubleshooting DNS or network-related issues.
 
 ## Effective Java - Third Edition: Joshua Bloch
 
-Definitely no introductory book to the Java programming language. But as soon as you have learnt the basic syntax of
-Java, I'd highly recommend reading the book. Joshua Bloch is an industry expert who has taken part in designing and
-implementing Java platform features. Nevertheless, the book is written in an easily understandable language. True
-experts can express complex problems with simple words!
+While not an introductory book on Java programming, I highly recommend it once you've grasped the language's basic
+syntax. Joshua Bloch, an industry expert involved in designing and implementing Java platform features, has created a
+masterpiece. Despite the complex subject matter, the book's language remains easily understandable. Even experienced
+developers can appreciate how Bloch effortlessly simplifies intricate problems.
 
 ## Java Concurrency in Practice: Brian Goetz
 
-This book has been on my list for long. This Christmas, I took the time to read it. And it was well worth the time. This
-book doesn't merely show you the API of concurrency classes in Java (which you could easily do on your own using the
-Java docs), but discusses and explains the trade-offs that were made when designing these classes. I especially like the
-section on the Java memory model. If you ever wondered what the effects of the `volatile` keyword in Java are, then this
-is the book for you.
+This book has been on my reading list for quite some time, and this Christmas I finally dedicated time to devouring its
+contents. It was well worth the wait. Unlike a mere documentation of Java's concurrency classes, this book delves into
+the design tradeoffs behind them. The section on the Java memory model is particularly fascinating. If you've ever
+pondered the impact of the volatile keyword in Java, this book will provide the answers you seek.
