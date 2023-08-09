@@ -1,6 +1,6 @@
 ---
 layout: ../layouts/AboutLayout.astro
-title: "Datenschutzerklärung"
+title: "Privacy Policy"
 ---
 
 #### Allgemeiner Hinweis und Pflichtinformationen
