@@ -1,6 +1,6 @@
-baseURL: "https://self-taught-developer.com"
+baseURL: "christianschleifer.com"
 theme: "even"
-title: "Self-Taught Developer"
+title: "Christian Schleifer"
 defaultContentLanguage: "en"
 preserveTaxonomyNames: true
 enableRobotsTXT: true
@@ -52,13 +52,12 @@ params:
   since: "2021"            # Site creation time          # 站点建立时间
 
   # site info (optional)                                  # 站点信息（可选，不需要的可以直接注释掉）
-  logoTitle: "Self-Taught Developer"        # default: the title value    # 默认值: 上面设置的title值
+  logoTitle: "Christian Schleifer"        # default: the title value    # 默认值: 上面设置的title值
   keywords: ["Hugo", "theme","even"]
   description: >
-      Welcome to my blog. My name is Christian. I'm a 28-years-old software engineer living in Munich. I studied medicine and 
+      Welcome to my blog. My name is Christian. I'm a 29-years-old software engineer living in Munich. I studied medicine and 
       have never undergone a formal computer science education. In this blog I want to write about tech and computer science concepts
-      I'm currently learning about. I also want to provide some guidance on how to become a self-taught developer who 
-      doesn't scare away from looking under the hood of abstractions.
+      I'm currently learning about. 
 
   # paginate of archives, tags and categories
   archivePaginate: 50

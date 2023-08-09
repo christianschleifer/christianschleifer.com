@@ -10,6 +10,3 @@ Join me as I explore various tech and computer science topics that capture my in
 understand the importance of not shying away from understanding the inner workings of abstractions. I hope to provide
 guidance and insights on how you too can embrace a similar approach, empowering you to become a confident and
 knowledgeable developer.
-
-Get ready to unravel the complexities of the tech world with me as your guide. Together, we'll navigate the intricacies
-of this ever-evolving field and uncover the magic behind the technology we interact with every day.
