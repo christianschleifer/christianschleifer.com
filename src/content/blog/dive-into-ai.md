@@ -1,7 +1,9 @@
 ---
 title: "Book List 2022"
 description: "List of the books on programming and computer science I read in 2022."
+author: Christian Schleifer
 pubDatetime: 2023-01-01T08:00:00Z
+draft: false
 tags:
   - "programming-books"
   - "computer-science"
