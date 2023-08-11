@@ -98,8 +98,7 @@ Of course! Here's a structured step-by-step roadmap for you to ramp up in data s
 > 3. **Unsupervised Learning**: K-means clustering, Hierarchical clustering, DBSCAN.
 > 4. **Ensemble Methods**: Boosting, Bagging.
 > 5. **Evaluation Metrics**: Understand metrics like accuracy, precision, recall, F1-score for classification and MAE,
-
-     MSE, RMSE for regression.
+>    MSE, RMSE for regression.
 
 > ### 5. **Advanced Machine Learning**:
 >
@@ -210,8 +209,7 @@ on paper...).
 > 3. **Unsupervised Learning**: K-means clustering, Hierarchical clustering, DBSCAN.
 > 4. **Ensemble Methods**: Boosting, Bagging.
 > 5. **Evaluation Metrics**: Understand metrics like accuracy, precision, recall, F1-score for classification and MAE,
-
-     MSE, RMSE for regression.
+>    MSE, RMSE for regression.
 
 Okay there's lots of stuff I don't know yet in here: Decision Trees, Random Forests, Support Vector Machines, Ridge,
 Lasso, Hierarchical clustering, DBSCAN, Boosting, Bagging, precision, recall, F1-score, RMSE. So lots of ground to cover
