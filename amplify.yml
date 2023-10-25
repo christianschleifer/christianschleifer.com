@@ -4,7 +4,8 @@ frontend:
     preBuild:
       commands:
         - echo "Ensure we're using Node.js version 18"
-        - nvm use 18
+        - nvm install -s 18.18.2
+        - nvm use 18.18.2
         - npm ci
     build:
       commands:
