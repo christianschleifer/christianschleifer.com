@@ -3,11 +3,34 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-Welcome to my blog! I'm Christian, a 29-year-old software engineer based in Munich. Although I studied medicine and
-didn't pursue a formal education in computer science, I have developed a passion for technology and computer science
-concepts. Through this blog, I aim to share my journey of learning and exploring these fascinating subjects.
+AstroPaper is a minimal, responsive and SEO-friendly Astro blog theme. I designed and crafted this based on [my personal blog](https://satnaing.dev/blog).
 
-Join me as I explore various tech and computer science topics that capture my interest. As a self-taught developer, I
-understand the importance of not shying away from understanding the inner workings of abstractions. I hope to provide
-guidance and insights on how you too can embrace a similar approach, empowering you to become a confident and
-knowledgeable developer.
+This theme is aimed to be accessible out of the box. Light and dark mode are supported by
+default and additional color schemes can also be configured.
+
+This theme is self-documented \_ which means articles/posts in this theme can also be considered as documentations. So, see the documentation for more info.
+
+<div>
+  <img src="/assets/dev.svg" class="sm:w-1/2 mx-auto" alt="coding dev illustration">
+</div>
+
+## Tech Stack
+
+This theme is written in vanilla JavaScript (+ TypeScript for type checking) and a little bit of ReactJS for some interactions. TailwindCSS is used for styling; and Markdown is used for blog contents.
+
+## Features
+
+Here are certain features of this site.
+
+- fully responsive and accessible
+- SEO-friendly
+- light & dark mode
+- fuzzy search
+- super fast performance
+- draft posts
+- pagination
+- sitemap & rss feed
+- highly customizable
+
+If you like this theme, you can star/contribute to the [repo](https://github.com/satnaing/astro-paper).  
+Or you can even give any feedback via my [email](mailto:contact@satnaing.dev).
