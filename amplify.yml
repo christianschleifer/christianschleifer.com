@@ -3,9 +3,9 @@ frontend:
   phases:
     preBuild:
       commands:
-        - echo "Ensure we're using Node.js version 20"
-        - nvm install 20
-        - nvm use 20
+        - echo "Ensure we're using Node.js version 18"
+        - nvm install 18
+        - nvm use 18
         - npm ci
     build:
       commands:
