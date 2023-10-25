@@ -3,34 +3,13 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-AstroPaper is a minimal, responsive and SEO-friendly Astro blog theme. I designed and crafted this based on [my personal blog](https://satnaing.dev/blog).
+Welcome to my blog! I'm Christian, a 29-year-old software engineer based in Munich. Although I studied medicine and
+didn't pursue a formal education in computer science, I have developed a passion for technology and computer science
+concepts. Through this blog, I aim to share my journey of learning and exploring tech stuff I'm interested in.
 
-This theme is aimed to be accessible out of the box. Light and dark mode are supported by
-default and additional color schemes can also be configured.
+How does the Linux kernel represent processes? How does virtual memory work? What are all these networking layers really
+about? How do database indices work? What is asynchronous I/O really about? Questions like these get me super excited. I
+love to peek behind abstractions and explore their actual implementation. Sometimes only on a conceptual level,
+sometimes with coding out some bare-bones implementations myself.
 
-This theme is self-documented \_ which means articles/posts in this theme can also be considered as documentations. So, see the documentation for more info.
-
-<div>
-  <img src="/assets/dev.svg" class="sm:w-1/2 mx-auto" alt="coding dev illustration">
-</div>
-
-## Tech Stack
-
-This theme is written in vanilla JavaScript (+ TypeScript for type checking) and a little bit of ReactJS for some interactions. TailwindCSS is used for styling; and Markdown is used for blog contents.
-
-## Features
-
-Here are certain features of this site.
-
-- fully responsive and accessible
-- SEO-friendly
-- light & dark mode
-- fuzzy search
-- super fast performance
-- draft posts
-- pagination
-- sitemap & rss feed
-- highly customizable
-
-If you like this theme, you can star/contribute to the [repo](https://github.com/satnaing/astro-paper).  
-Or you can even give any feedback via my [email](mailto:contact@satnaing.dev).
+I myself benefited a lot from reading blog posts which is why I hope this blog may benefit you as well.

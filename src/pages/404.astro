@@ -16,7 +16,7 @@ import LinkButton from "@components/LinkButton.astro";
       <p>Page Not Found</p>
       <LinkButton
         href="/"
-        className="my-6 underline decoration-dashed underline-offset-8 text-lg"
+        className="my-6 text-lg underline decoration-dashed underline-offset-8"
       >
         Go back home
       </LinkButton>
@@ -30,12 +30,15 @@ import LinkButton from "@components/LinkButton.astro";
   #main-content {
     @apply mx-auto flex max-w-3xl flex-1 items-center justify-center;
   }
+
   .not-found-wrapper {
     @apply mb-14 flex flex-col items-center justify-center;
   }
+
   .not-found-wrapper h1 {
     @apply text-9xl font-bold text-skin-accent;
   }
+
   .not-found-wrapper p {
     @apply mt-4 text-2xl sm:text-3xl;
   }
