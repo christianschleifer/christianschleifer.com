@@ -6,7 +6,7 @@ export const SITE: Site = {
   desc: "Personal blog of Christian Schleifer",
   title: "Christian Schleifer",
   lightAndDarkMode: true,
-  postPerPage: 3,
+  postPerPage: 5,
 };
 
 export const LOCALE = ["en-EN"]; // set to [] to use the environment default
@@ -28,6 +28,6 @@ export const SOCIALS: SocialObjects = [
     name: "Mail",
     href: "mailto:christianschleifer@gmx.de",
     linkTitle: `Send an email to ${SITE.title}`,
-    active: false,
+    active: true,
   },
 ];
