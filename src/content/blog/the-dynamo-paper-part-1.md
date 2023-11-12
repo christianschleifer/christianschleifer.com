@@ -1,6 +1,6 @@
 ---
 title: "The Dynamo Paper: Part 1"
-description: "Part 1 of a blogpost series about the Dynamo Paper. This part focuses on why Dynamo was needed in the first place and what the specific requirements were that Dynamo had to meed."
+description: "Part 1 of a blogpost series about the Dynamo Paper. This part focuses on why Dynamo was needed in the first place and what the specific requirements were that Dynamo had to meet."
 pubDatetime: 2023-11-12T11:05:00+2
 tags:
   - "dynamo"
