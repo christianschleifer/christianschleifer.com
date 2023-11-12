@@ -9,6 +9,7 @@ tags:
   - "hash table"
   - "storage engine"
   - "deep dive"
+  - "database"
 ---
 
 ## Table of contents
