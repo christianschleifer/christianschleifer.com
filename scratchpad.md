@@ -81,7 +81,6 @@ Eventually consistent. In case of network failure, there is no upper bound on th
 ### Data Versioning
 
 Vector clocks
-we
 
 ## Summary
 
