@@ -3,7 +3,7 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-Welcome to my blog! I'm Christian, a 29-year-old software engineer based in Munich. Although I studied medicine and
+Welcome to my blog! I'm Christian, a 30-year-old software engineer based in Munich. Although I studied medicine and
 didn't pursue a formal education in computer science, I have developed a passion for technology and computer science
 concepts. Through this blog, I aim to share my journey of learning and exploring tech stuff I'm interested in.
 
