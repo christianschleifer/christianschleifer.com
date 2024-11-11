@@ -280,9 +280,3 @@ This is fairly general advice as well. Kaggle was mentioned before so let's just
 I think I got a rough understanding of what I need to learn to get into the field of data science and machine
 learning. I think I'll start with Numpy and Pandas APIs to get a little more dangerous when looking at and preparing
 data for machine learning tasks.
-
-## Today's music
-
-I love listening to music while playing with new technology or hacking on side projects.
-Today I was listening
-to [Soft Chill House Mix - Amii Watson B2B Jimmi Harvey](https://www.youtube.com/watch?v=k7HmLM7ZBBU).

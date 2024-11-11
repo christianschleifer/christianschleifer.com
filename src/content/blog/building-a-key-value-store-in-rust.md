@@ -408,8 +408,3 @@ crashes during writes to the database file, distribution across multiple machine
 
 However, to grasp the basic principles that underlay a simplistic storage engine, this small project was very helpful to
 me. And I hope, that this blog post was helpful to you as well 🙂.
-
-## Today's music
-
-I love listening to music while playing with new technology or hacking on side projects. Today I was listening to the
-fantastic [Unplugged Album of Eric Clapton](https://open.spotify.com/album/6zxsfP7TdXLAS9QEGNN0Uy).

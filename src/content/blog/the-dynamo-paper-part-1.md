@@ -112,8 +112,3 @@ I'd like to point out some statements made in the discussion of the related work
 
 We covered the easier parts of the paper in this first blogpost. The next section is `System Architecture`, which is
 where things get more technical. We'll start from there in the next blogpost of this series.
-
-## Today's music
-
-I love listening to music while playing with new technology or hacking on side projects. Today I was listening to
-the [Black Holes and Revelations Album by Muse](https://open.spotify.com/album/0lw68yx3MhKflWFqCsGkIs).

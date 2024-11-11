@@ -57,10 +57,10 @@ using indices. An index is a data structure that provides fast access to rows in
 
 Conceptually, the index for the column "region" might look like this:
 
-```
-Islay       --> [0, 4, 5, 7, 8]
-Speyside    --> [1, 6]
-Highlands   --> [2, 3, 9]
+```bash
+# Islay       --> [0, 4, 5, 7, 8]
+# Speyside    --> [1, 6]
+# Highlands   --> [2, 3, 9]
 ```
 
 When the database executes the SQL query, it will first look at the index, and only retrieve the entries with the IDs
@@ -81,10 +81,10 @@ bitmap conversions when answering certain SQL queries.
 
 Let's come back to our index for the column `region`:
 
-```
-Islay       --> [0, 4, 5, 7, 8]
-Speyside    --> [1, 6]
-Highlands   --> [2, 3, 9]
+```rust
+// Islay       --> [0, 4, 5, 7, 8]
+// Speyside    --> [1, 6]
+// Highlands   --> [2, 3, 9]
 ```
 
 How to represent this index with bitmaps?
@@ -100,10 +100,10 @@ For our index, we can do the following:
 
 The bitmap index for the column `region` would look like this:
 
-```
-Islay       --> [1, 0, 0, 0, 1, 1, 0, 1, 1, 0]
-Speyside    --> [0, 1, 0, 0, 0, 0, 1, 0, 0, 0]
-Highlands   --> [0, 0, 1, 1, 0, 0, 0, 0, 0, 1]
+```rust
+// Islay       --> [1, 0, 0, 0, 1, 1, 0, 1, 1, 0]
+// Speyside    --> [0, 1, 0, 0, 0, 0, 1, 0, 0, 0]
+// Highlands   --> [0, 0, 1, 1, 0, 0, 0, 0, 0, 1]
 ```
 
 Now, when the database executes our query to return all distilleries in the region, it could get the list of the
@@ -121,13 +121,13 @@ WHERE region = 'Speyside' OR region = 'Highlands';
 For this query, the database could get the bitmaps for both `Speyside` and `Highlands` and do a bitwise union. A bitwise
 union between two bitmaps is done by setting a bit to one if either of the two input bitmap bits is set to one.
 
-```
-Speyside    --> [0, 1, 0, 0, 0, 0, 1, 0, 0, 0]
-OR
-Highlands   --> [0, 0, 1, 1, 0, 0, 0, 0, 0, 1]
-----------------------------------------------
+```rust
+// Speyside    --> [0, 1, 0, 0, 0, 0, 1, 0, 0, 0]
+// OR
+// Highlands   --> [0, 0, 1, 1, 0, 0, 0, 0, 0, 1]
+// ----------------------------------------------
 
-Union       --> [0, 1, 1, 1, 0, 0, 1, 0, 0, 1]
+// Union       --> [0, 1, 1, 1, 0, 0, 1, 0, 0, 1]
 ```
 
 The positions of the bits in the `Union` bitmap that are equal to one are `1`, `2`, `3`, `6` and `9`.

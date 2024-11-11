@@ -161,9 +161,3 @@ d = [[[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]]], [[[13, 14, 15], [16, 1
 Note that many authors use the term tensor to specifically describe a three-dimensional array. In my blog posts,
 I'll try to be consistent and thus also add the dimension to the term tensor. So I'll use the term three-dimensional
 tensor instead of just tensor.
-
-## Today's music
-
-I love listening to music while playing with new technology or hacking on side projects.
-Today I was listening
-to [Schumanns Klavierkonzert: Grimaud und Hengelbrock](https://www.youtube.com/watch?v=NCeTl85p-WU).
