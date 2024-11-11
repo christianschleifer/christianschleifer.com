@@ -48,14 +48,14 @@ whiskies). You start by investigating which distilleries in that region you alre
 you could run this query:
 
 ```sql
-SELECT * FROM whiskies
+SELECT * FROM distilleries
 WHERE region = 'Islay';
 ```
 
 How can the database execute such a query quickly without having to look at all rows in the table? The answer is by
 using indices. An index is a data structure that provides fast access to rows in a table based on specified columns.
 
-Conceptually, the index for the column "region" might look like this:
+Conceptually, the index for the column `region` might look like this:
 
 ```bash
 # Islay       --> [0, 4, 5, 7, 8]
@@ -114,7 +114,7 @@ Let's say we next wanted to know which distilleries we have in our selection in 
 The SQL query for this would be:
 
 ```sql
-SELECT * FROM whiskies
+SELECT * FROM distilleries
 WHERE region = 'Speyside' OR region = 'Highlands';
 ```
 
