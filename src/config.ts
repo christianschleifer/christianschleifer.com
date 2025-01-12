@@ -14,7 +14,7 @@ export const LOCALE = ["en-EN"]; // set to [] to use the environment default
 export const SOCIALS: SocialObjects = [
   {
     name: "Github",
-    href: "https://github.com/ChristianSchleifer",
+    href: "https://github.com/christianschleifer",
     linkTitle: ` ${SITE.title} on Github`,
     active: true,
   },
