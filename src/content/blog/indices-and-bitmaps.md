@@ -14,7 +14,7 @@ tags:
 ## Introduction
 
 In the last months, a project at work had me dive deep into the details of bitmaps. In this blog post series, I want to
-share the knowledge I gained in that area.
+give an introduction to bitmaps.
 
 To make this a bit more tangible, let's start with something you might be more familiar with. Let's say you are running
 an e-commerce platform for whiskies. Your inventory is stored in a relational database. The (super simplified) database
@@ -28,7 +28,7 @@ CREATE TABLE distilleries (
 );
 ```
 
-Let's fill this table with 10 entries:
+The entries in that table could look like this:
 
 | id  | name         | region    |
 | --- | ------------ | --------- |
