@@ -157,43 +157,43 @@ represent the index in the `bits` vector. The 5 LSBs represent the bit position 
 **Note that I'm using the least-significant-bit-last notation here, which means that leftmost bit is the most
 significant bit, while the rightmost bit is the least significant bit.**
 
-```
-// 31_u32
+```shell
+# 31_u32
 
-|                u32                |
-| 000000000000000000000000000 11111 |
-| --------- 27-msb ---------- 5-lsb |
-              |                 |
-              V                 |
-    index 0 in `bits` vector    |
-                                V
-                            31st bit
-                            position
-
-// 32_u32
-
-|                u32                |
-| 000000000000000000000000001 00000 |
-| --------- 27-msb ---------- 5-lsb |
-              |                 |
-              V                 |
-    index 1 in `bits` vector    |
-                                V
-                            0th bit
-                            position
+# |                u32                |
+# | 000000000000000000000000000 11111 |
+# | --------- 27-msb ---------- 5-lsb |
+#               |                 |
+#               V                 |
+#     index 0 in `bits` vector    |
+#                                 V
+#                             31st bit
+#                             position
+#
+# 32_u32
+#
+# |                u32                |
+# | 000000000000000000000000001 00000 |
+# | --------- 27-msb ---------- 5-lsb |
+#               |                 |
+#               V                 |
+#     index 1 in `bits` vector    |
+#                                 V
+#                             0th bit
+#                             position
 ```
 
 Accordingly, the `bits` vector of our `SimpleBitmap` should look like this after having performed both `bm.set(31)` and
 `bm.set(32)`.
 
-```
-|     index 0 in `bits` vector     |     index 1 in `bits` vector    |
-|               u32                |                u32              |
-| 10000000000000000000000000000000 | 0000000000000000000000000000001 |
-  |                                                                |
-  V                                                                V
- 31st bit                                                       0th bit
- position                                                       position
+```shell
+# |     index 0 in `bits` vector     |     index 1 in `bits` vector    |
+# |               u32                |                u32              |
+# | 10000000000000000000000000000000 | 0000000000000000000000000000001 |
+#   |                                                                |
+#   V                                                                V
+#  31st bit                                                       0th bit
+#  position                                                       position
 ```
 
 Time to put our thinking into code:
