@@ -169,9 +169,9 @@ significant bit, while the rightmost bit is the least significant bit.**
 #                                 V
 #                             31st bit
 #                             position
-#
+
 # 32_u32
-#
+
 # |                u32                |
 # | 000000000000000000000000001 00000 |
 # | --------- 27-msb ---------- 5-lsb |
