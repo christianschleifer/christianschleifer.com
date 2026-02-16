@@ -3,7 +3,7 @@ title: "Dependency Injection Without the Bloat: Why I Skip Java Dependency Injec
 description:
   My personal take on why I think the Dependency Injection Pattern helps me write better code while Dependency Injection Frameworks only add
   complexity.
-pubDatetime: 2026-02-16T05:00:00Z
+pubDatetime: 2026-02-16T06:00:00Z
 tags:
   - "dependency injection"
   - "design pattern"
