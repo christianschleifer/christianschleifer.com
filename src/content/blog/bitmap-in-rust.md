@@ -12,17 +12,16 @@ tags:
 
 ## Introduction
 
-In the [last blog post](./indices-and-bitmaps), we took a look at database indices. Bitmaps are one of the many data
-structures that can be used to power such an index.
+In the [last blog post](./indices-and-bitmaps), we took a look at database indices. Bitmaps are one of the many data structures that can be
+used to power such an index.
 
-Time to implement a bitmap ourselves. I use Rust to do this, though any other programming language could be used. The
-full code can be found at https://github.com/christianschleifer/bitmaps-in-rust.
+Time to implement a bitmap ourselves. I use Rust to do this, though any other programming language could be used. The full code can be found
+at https://github.com/christianschleifer/bitmaps-in-rust.
 
 ## Requirements
 
-Be it in a hobby project like this, or a project at work, it's often a good idea to state the requirements for the
-solution one is building first thing. We'll focus on the functional requirements, which define the behavior our bitmap
-should support.
+Be it in a hobby project like this, or a project at work, it's often a good idea to state the requirements for the solution one is building
+first thing. We'll focus on the functional requirements, which define the behavior our bitmap should support.
 
 Our bitmap should allow
 
@@ -44,15 +43,14 @@ pub trait Bitmap {
 
 ## SimpleBitmap
 
-The `Bitmap` trait just specifies the functionality that a bitmap must offer. Now let's implement the `Bitmap` trait.
-We'll start with a trivial implementation. This will not be a production-read bitmap. There is a myriad of things that
-could be improved upon. To explain the concepts, it can be better to keep things simple, though.
+The `Bitmap` trait just specifies the functionality that a bitmap must offer. Now let's implement the `Bitmap` trait. We'll start with a
+trivial implementation. This will not be a production-read bitmap. There is a myriad of things that could be improved upon. To explain the
+concepts, it can be better to keep things simple, though.
 
-Firstly, we need a way to store an array of bits. Rust does not provide a bit-sized data type. While we could use the
-8-bit `byte` data type, I'll opt for the 32-bit `u32` data type (this will make comparison with the more optimized
-bitmap of the next blog post a bit easier). Instead of a fixed-size array, I'll use the dynamically
-sized [Vec](https://doc.rust-lang.org/stable/std/vec/struct.Vec.html) to hold the elements of type `u32`. This way, we
-can grow our bitmap when needed.
+Firstly, we need a way to store an array of bits. Rust does not provide a bit-sized data type. While we could use the 8-bit `byte` data
+type, I'll opt for the 32-bit `u32` data type. Instead of a fixed-size array, I'll use the dynamically sized
+[Vec](https://doc.rust-lang.org/stable/std/vec/struct.Vec.html) to hold the elements of type `u32`. This way, we can grow our bitmap when
+needed.
 
 ```rust
 // src/lib.rs
@@ -69,8 +67,8 @@ pub struct SimpleBitmap {
 
 ## Creating the Bitmap
 
-We don't want to expose the `bits` field to users of our bitmap. Still, they need a way to construct an instance of the
-bitmap. That's why we need a publicly exposed constructor method, conventionally named `new`.
+We don't want to expose the `bits` field to users of our bitmap. Still, they need a way to construct an instance of the bitmap. That's why
+we need a publicly exposed constructor method, conventionally named `new`.
 
 ```rust
 // src/simple_bitmap.rs
@@ -84,8 +82,8 @@ impl SimpleBitmap {
 
 ## Setting Bits
 
-Time to implement setting a bit. Let's start with writing a test making use of the to-be-implemented `set` method. We'll
-extend this test later when we implement getting a bit.
+Time to implement setting a bit. Let's start with writing a test making use of the to-be-implemented `set` method. We'll extend this test
+later when we implement getting a bit.
 
 ```rust
 // src/simple_bitmap.rs
@@ -109,14 +107,14 @@ mod tests {
 }
 ```
 
-What do we have to do when our bitmap is called with `bm.set(31)` or `bm.set(32)`? We first have to check in which `u32`
-we should set the bit. Each `u32` holds 32 bits. So the first `u32` in our `bits` vector can store values for indices
-`0` up to and including `31`. The second `u32` can store values for indices `32` up to and including `63` and so on.
-Bear in mind that we also have to check whether we allocated enough `u32`s to access the `u32` at the given index.
+What do we have to do when our bitmap is called with `bm.set(31)` or `bm.set(32)`? We first have to check in which `u32` we should set the
+bit. Each `u32` holds 32 bits. So the first `u32` in our `bits` vector can store values for indices `0` up to and including `31`. The second
+`u32` can store values for indices `32` up to and including `63` and so on. Bear in mind that we also have to check whether we allocated
+enough `u32`s to access the `u32` at the given index.
 
-For the provided index `31`, we have to access the `u32` at index `0` in our `bits` vector. For the provided index
-`32`, it's the `u32` at index `1`. We can calculate this by dividing the provided index by `32`, i.e. the number of bits
-that fit into a `u32`, using [integer division](https://mathworld.wolfram.com/IntegerDivision.html).
+For the provided index `31`, we have to access the `u32` at index `0` in our `bits` vector. For the provided index `32`, it's the `u32` at
+index `1`. We can calculate this by dividing the provided index by `32`, i.e. the number of bits that fit into a `u32`, using
+[integer division](https://mathworld.wolfram.com/IntegerDivision.html).
 
 ```rust
 // src/simple_bitmap.rs
@@ -128,9 +126,9 @@ fn get_bits_vector_index() {
 }
 ```
 
-Now that we figured out which `u32` to access in our `bits` vector, we need to think about which bit of the `u32` we
-need to modify. This, we can do by either using the modulo operation, or by performing a bitwise and operation with the
-number `31_u32` (see [rust operators](https://doc.rust-lang.org/book/appendix-02-operators.html)).
+Now that we figured out which `u32` to access in our `bits` vector, we need to think about which bit of the `u32` we need to modify. This,
+we can do by either using the modulo operation, or by performing a bitwise and operation with the number `31_u32` (see
+[rust operators](https://doc.rust-lang.org/book/appendix-02-operators.html)).
 
 ```rust
 // src/simple_bitmap.rs
@@ -149,13 +147,13 @@ fn get_bit_index_in_u32_using_bitwise_and() {
 }
 ```
 
-Another mental model for what we are doing here is to think of splitting the provided index into bits `[0..27]`, i.e.
-the most significant 27 bits, and `[27..32]`, i.e. the least significant 5
-bits ([explanation of most and least significant bits](https://en.wikipedia.org/wiki/Bit_numbering)). The 27 MSBs
-represent the index in the `bits` vector. The 5 LSBs represent the bit position in the `u32`.
+Another mental model for what we are doing here is to think of splitting the provided index into bits `[0..27]`, i.e. the most significant
+27 bits, and `[27..32]`, i.e. the least significant 5 bits
+([explanation of most and least significant bits](https://en.wikipedia.org/wiki/Bit_numbering)). The 27 MSBs represent the index in the
+`bits` vector. The 5 LSBs represent the bit position in the `u32`.
 
-**Note that I'm using the least-significant-bit-last notation here, which means that leftmost bit is the most
-significant bit, while the rightmost bit is the least significant bit.**
+**Note that I'm using the least-significant-bit-last notation here, which means that leftmost bit is the most significant bit, while the
+rightmost bit is the least significant bit.**
 
 ```shell
 # 31_u32
@@ -183,8 +181,7 @@ significant bit, while the rightmost bit is the least significant bit.**
 #                             position
 ```
 
-Accordingly, the `bits` vector of our `SimpleBitmap` should look like this after having performed both `bm.set(31)` and
-`bm.set(32)`.
+Accordingly, the `bits` vector of our `SimpleBitmap` should look like this after having performed both `bm.set(31)` and `bm.set(32)`.
 
 ```shell
 # |     index 0 in `bits` vector     |     index 1 in `bits` vector    |
@@ -217,13 +214,12 @@ impl Bitmap for SimpleBitmap {
 }
 ```
 
-I hope it's possible to follow the code after having walked through how we must choose the bit we want to set. Let's
-take a closer look at `let modified_u32 = stored_u32 | (0b1 << bit_index_in_u32);` though. What's happening here?
+I hope it's possible to follow the code after having walked through how we must choose the bit we want to set. Let's take a closer look at
+`let modified_u32 = stored_u32 | (0b1 << bit_index_in_u32);` though. What's happening here?
 
-`(0b1 << bit_index_in_u32)` is creating a [bitmask](<https://en.wikipedia.org/wiki/Mask_(computing)>), where only the
-bit at position `bit_index_in_u32` is set to `1`. Doing
-the [bitwise or](https://doc.rust-lang.org/book/appendix-02-operators.html) operation with the `stored_u32` preservers
-all bits that are set in `stored_u32`, and additionally sets the bit at position `bit_index_in_u32` to `1`.
+`(0b1 << bit_index_in_u32)` is creating a [bitmask](<https://en.wikipedia.org/wiki/Mask_(computing)>), where only the bit at position
+`bit_index_in_u32` is set to `1`. Doing the [bitwise or](https://doc.rust-lang.org/book/appendix-02-operators.html) operation with the
+`stored_u32` preservers all bits that are set in `stored_u32`, and additionally sets the bit at position `bit_index_in_u32` to `1`.
 
 Our test should pass now:
 
@@ -254,9 +250,8 @@ error: test failed, to rerun pass `--lib`
 
 Oops! `index out of bounds: the len is 0 but the index is 0`.
 
-We forgot to check whether there is already enough `u32` integers in the `bits` vector when indexing into the vector
-using the calculated `u32_index_in_bits_vec`. We need to add a check, and extend the vector with zeros if there is not
-enough `u32`s yet.
+We forgot to check whether there is already enough `u32` integers in the `bits` vector when indexing into the vector using the calculated
+`u32_index_in_bits_vec`. We need to add a check, and extend the vector with zeros if there is not enough `u32`s yet.
 
 ```rust
 // src/simple_bitmap.rs
@@ -430,8 +425,8 @@ error[E0369]: no implementation for `simple_bitmap::SimpleBitmap | simple_bitmap
 note: an implementation of `BitOr` might be missing for `simple_bitmap::SimpleBitmap`
 ```
 
-The error message is very helpful and points us to the exact problem. As a solution, we could either merely implement
-`BitOr` for `SimpleBitmap`, or additionally add a supertrait for our `Bitmap` trait. Let's do the latter.
+The error message is very helpful and points us to the exact problem. As a solution, we could either merely implement `BitOr` for
+`SimpleBitmap`, or additionally add a supertrait for our `Bitmap` trait. Let's do the latter.
 
 ```rust
 // src/lib.rs
@@ -443,8 +438,8 @@ pub trait Bitmap: Sized + BitOr {
 }
 ```
 
-I'll skip the reason why we have to add the `Sized` trait as a supertrait. If you're interested, you can read the reason
-in the [language reference](https://doc.rust-lang.org/reference/items/traits.html#dyn-compatibility).
+I'll skip the reason why we have to add the `Sized` trait as a supertrait. If you're interested, you can read the reason in the
+[language reference](https://doc.rust-lang.org/reference/items/traits.html#dyn-compatibility).
 
 Let's implement the [BitOr](https://doc.rust-lang.org/stable/std/ops/trait.BitOr.html) trait for `SimpleBitmap`.
 
@@ -497,9 +492,5 @@ test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 6 filtered out; fini
 
 ## Summary
 
-In this blog post, we have built a straightforward implementation of a bitmap, which allows us to set and get bits. It
-also provides the functionality to do unions between bitmaps. While our bitmap is functionally correct, it can be fairly
-inefficient in certain cases. Can you think of some already?
-
-We'll take a detailed look in the next blog post of this series, and implement a different version of a bitmap which
-mitigates some of the problems of our `SimpleBitmap`.
+In this blog post, we have built a straightforward implementation of a bitmap, which allows us to set and get bits. It also provides the
+functionality to do unions between bitmaps.
