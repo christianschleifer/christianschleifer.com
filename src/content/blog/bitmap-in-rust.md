@@ -1,6 +1,6 @@
 ---
 title: "Bitmap in Rust"
-description: "Walk-through implementation of a simple bitmap in Rust"
+description: "Walk-through implementation of a simple bitmap in Rust."
 pubDatetime: 2025-01-12T20:00:00+1
 tags:
   - "index"

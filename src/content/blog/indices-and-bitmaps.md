@@ -1,6 +1,6 @@
 ---
 title: "Indices and Bitmaps"
-description: "Database indices and how to implement them using bitmaps"
+description: "Database indices and how to implement them using bitmaps."
 pubDatetime: 2024-11-10T07:00:00+1
 tags:
   - "database"
