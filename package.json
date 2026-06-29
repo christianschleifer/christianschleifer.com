@@ -24,33 +24,27 @@
     "dayjs": "1.x",
     "lodash.kebabcase": "4.x",
     "rehype-callouts": "2.x",
-    "remark-collapse": "0.x",
+    "remark-collapse": "0.1.x",
     "remark-toc": "9.x",
-    "satori": "0.x",
-    "sharp": "0.x",
+    "satori": "0.26.x",
+    "sharp": "0.34.x",
     "slugify": "1.x",
     "tailwindcss": "4.x"
   },
   "devDependencies": {
-    "@astrojs/check": "0.x",
+    "@astrojs/check": "0.9.x",
     "@astrojs/markdown-remark": "7.x",
     "@pagefind/default-ui": "1.x",
     "@shikijs/transformers": "4.x",
-    "@tailwindcss/typography": "0.x",
+    "@tailwindcss/typography": "0.5.x",
     "@types/lodash.kebabcase": "4.x",
     "@typescript-eslint/parser": "8.x",
     "eslint": "10.x",
     "eslint-plugin-astro": "1.x",
     "pagefind": "1.x",
     "prettier": "3.x",
-    "prettier-plugin-astro": "0.x",
-    "prettier-plugin-tailwindcss": "0.x",
+    "prettier-plugin-astro": "0.14.x",
+    "prettier-plugin-tailwindcss": "0.8.x",
     "typescript": "6.x"
-  },
-  "pnpm": {
-    "overrides": {
-      "esbuild": "0.28.1",
-      "yaml": "2.9.0"
-    }
   }
 }
