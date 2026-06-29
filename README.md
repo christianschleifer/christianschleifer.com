@@ -78,6 +78,7 @@ The Amplify build uses Node 24 via `nvm` and installs with pnpm:
 ```yaml
 preBuild:
   commands:
+    - rm -rf node_modules
     - nvm install 24
     - nvm use 24
     - npx --yes pnpm@10 install --frozen-lockfile
