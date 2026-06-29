@@ -4,10 +4,12 @@
 # Except these files & folders
 !/src
 !/public
-!/.github
 !tsconfig.json
 !astro.config.ts
 !package.json
 !.prettierrc
-!.eslintrc.js
+!eslint.config.js
 !README.md
+
+# Ignore MDX files
+*.mdx

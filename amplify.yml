@@ -3,12 +3,14 @@ frontend:
   phases:
     preBuild:
       commands:
-        - npm ci
+        - nvm install 22
+        - nvm use 22
+        - npx --yes pnpm@10 install --frozen-lockfile
     build:
       commands:
-        - npm run build
+        - npx --yes pnpm@10 run build
   artifacts:
-    baseDirectory: /dist
+    baseDirectory: dist
     files:
       - '**/*'
   cache:

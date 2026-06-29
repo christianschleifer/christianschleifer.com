@@ -2,8 +2,431 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## [3.0.0](https://github.com/satnaing/astro-paper/compare/v2.3.0...v3.0.0) (2023-09-25)
+## v6.1.0 (2026-06-06)
 
+### Feat
+
+- add callout support (#655)
+- add accessible image lightbox for post images (#654)
+
+### Fix
+
+- sanitize post title for valid CSS view-transition-name (#650)
+- iterate all weight matches in getFontPathByWeight (#645)
+- update incorrect RSS link (#649)
+
+## v6.0.0 (2026-05-17)
+
+> ⚠ **BREAKING CHANGES**
+>
+> - User config moved to `astro-paper.config.ts`; `src/config.ts` is now internal resolved defaults only
+> - Blog content directory changed from `src/data/blog` to `src/content/posts`
+> - Pages content moved to `src/content/pages`
+> - Several utility exports and component names updated
+
+### Feat
+
+- **config**: rework into typed user-facing `astro-paper.config.ts` with internal resolved defaults layer (#631)
+- **i18n**: add lightweight i18n layer with English string keys and `useTranslations` helper (#631)
+- **mdx**: add MDX support via @astrojs/mdx (#631)
+- **base-path**: add base path support across routing and asset helpers (#631)
+- **archives**: add archives page (#631)
+- **search**: integrate Pagefind for static full-text search (#631)
+- **toc**: add table of contents for markdown posts (#631)
+- **timezone**: add per-post timezone support with site-level fallback (#631)
+- **rtl**: add RTL language direction support (#631)
+- **share**: add share links in post detail page (#631)
+- **edit-post**: add configurable edit post link in post detail (#631)
+- **back-button**: add back button in post detail (#631)
+- **shiki**: add Shiki transformers for enhanced code block syntax highlighting (#631)
+- integrate Astro fonts API with Google Sans Code font (#602)
+
+### Fix
+
+- **og**: avoid double slashes when appending index.png (#631)
+- **header**: adjust icon button and alignment in mobile (#631)
+- **a11y**: improve muted-foreground color contrast (#631)
+- decouple ClientRouter from lightAndDarkMode feature flag (#631)
+- slugify supports better acronyms and preserve non-latin char (#606)
+- add autofocus in search bar and update search result title style (#603)
+
+### Refactor
+
+- optimize theme script to prevent render-blocking (#601)
+
+### Chore
+
+- upgrade Astro to v6 and align CI to Node.js 24 (#631)
+
+## v5.5.1 (2026-01-08)
+
+### Fix
+
+- improve Tag component by making it entire component clickable (#598)
+- **og-images**: wrap Buffer in Uint8Array for Response body (#568)
+- make post header vertical bar respect global settings (#562)
+- skip invalid code block metadata without key-value pairs (#561)
+
+### Refactor
+
+- update component props and improve types (#600)
+- improve props usage and dynamic rendering in LinkButton (#599)
+- improve semantic by replacing decorative hr with borders (#597)
+
+## v5.5.0 (2025-07-12)
+
+### Feat
+
+- enhance file name transformer with additional options (#555)
+
+### Fix
+
+- update syntax highlighting transformer styles (#558)
+- typo in astro-paper-v5 blog post (#556)
+
+## v5.4.3 (2025-06-21)
+
+### Fix
+
+- remove time from post datetime display (#546)
+- update edit post link styling and text (#545)
+- typos across codebase (#543)
+
+## v5.4.2 (2025-06-15)
+
+### Fix
+
+- broken typography in about layout (#541)
+- remove extra padding in fenced code blocks (#540)
+
+## v5.4.1 (2025-06-14)
+
+### Fix
+
+- make heading anchors in article visible on mobile (#537)
+
+### Refactor
+
+- update tailwind typography css overrides (#538)
+
+## v5.4.0 (2025-06-14)
+
+### Feat
+
+- add file name transformer for fenced code blocks (#535)
+- add RTL language support (#531)
+- add Shiki transformers for better syntax highlighting (#534)
+
+### Fix
+
+- replace broken prev/next links with correct paths (#533)
+
+## v5.3.0 (2025-06-11)
+
+### Feat
+
+- improve back-to-top button behavior (#520)(#527)
+
+### Fix
+
+- navigation flicker on Android when in dark mode (#494)
+- add scroll offset for anchor targets (#506)
+- add types for constants to avoid type errors when empty (#501)
+- update heading alignment and font-size (#473)
+
+### Refactor
+
+- extract redundant max-width into utility (#525)
+- use new astro env (#507)
+
+## v5.2.0 (2025-03-22)
+
+### Feat
+
+- add global and per-post timezone support (#491)
+
+### Fix
+
+- adjust nav bar alignment in heading (#492)
+- ensure only one search bar is displayed on nav link clicks (#489)
+
+## v5.1.1 (2025-03-20)
+
+### Fix
+
+- initial light mode flash in dark mode (#488)
+- broken editPost link and update editPost logic  (#487)
+- prevent overflow by adding line breaks in table codes (#485)
+
+## v5.1.0 (2025-03-18)
+
+### Feat
+
+- allow blog posts to be organized by subdirectories
+
+### Other
+
+- update blog post creation guide
+- upgrade astro and dependencies
+
+## v5.0.1 (2025-03-12)
+
+### Fix
+
+- update docker-compose (#475)
+- update import location in giscus example (#474)
+- add an option to disable dynamic OG image generation (#476)
+- remove unused `ogImage` size validation (#462)
+- correct Google Fonts API URL construction for proper weight fetching
+- align vertically in header nav (#460)
+- add font-weight param in og image card style (#453)
+
+### Docs
+
+- update giscus integration guide for AstroPaper v5 (#472)
+- update color schemes guide for AstroPaper v5 (#469)
+- update LaTeX equations guide in Astro blog posts (#461)
+
+## v5.0.0 (2025-03-08)
+
+### Feat
+
+- add pagefind for static search (#458)
+- update back button logic
+
+### Fix
+
+- ignore  in eslint
+- update blog table padding
+- remove unused back url in the card url
+- show light/dark button according to site setting
+- add author url in Google JSON-LD conditionally
+
+### Refactor
+
+- remove react dependency for UI interactions (#457)
+- separate config and constants
+- update import alias in files
+- update blog directory to `src/data/blog`
+
+
+- upgrade to Tailwind CSS v4
+- update import alias to `@/*`
+- upgrade Astro to v5 and related packages
+
+## v4.8.0 (2025-02-08)
+
+### Feat
+
+- add pencil icon before suggestion changes text (#405)
+
+### Fix
+
+- use tag name for display in tags page (#438)
+- exclude `/archives` from sitemap if it is disabled (#425)
+- add inline-block class to post title for improved view transition animation (#420)
+- sort archive posts by pubDatetime (#415)
+- focus search input on mount (#414)
+- replace twitter with x (#407)
+
+## v4.7.0 (2024-10-15)
+
+### Feat
+
+- add archives page with configurable menu (#386)
+
+## v4.6.0 (2024-10-13)
+
+### Feat
+
+- add edit post feature in blog posts (#384)
+
+### Refactor
+
+- remove duplicate [page].astro (#389)
+
+## v4.5.1 (2024-10-02)
+
+### Fix
+
+- **docs**: update giscus blog post (#392)
+- add missing posts sorting (#383)
+
+## v4.5.0 (2024-09-16)
+
+### Feat
+
+- add prev/next links at the bottom of blog post (#372)
+
+### Fix
+
+- **og**: add the missing SITE.website to loadGoogleFonts  (#360)
+- **blog**: correct file reference in reading time guide (#359)
+
+### Refactor
+
+- replace pagination logic with Astro built-in pagination (#376)
+
+### Perf
+
+- preload font and load theme script asynchronously (#380)
+
+## v4.4.0 (2024-08-19)
+
+### Content Layer API
+
+- upgrade Astro and use Content Layer API (#355)
+
+### Others
+
+- upgrade ESLint to v9 and update configurations (#356)
+- replace github-slugger with lodash.kebabcase (#357)
+
+## v4.3.2 (2024-08-17)
+
+### Fix
+
+- **a11y**: remove aria-labels from non-interactive elements (#346)
+
+### Refactor
+
+- update tailwind classes to v3 syntax (#345)
+- remove commented codes
+
+### Others
+
+- docs: update estimated reading time blog post (#354)
+- docs: add instructions for Google Site Verification in AstroPaper (#353)
+- docs: update pre-commit hook blog post (#344)
+- ci: add CI workflow (#340)
+
+## v4.3.1 (2024-07-27)
+
+### Fix
+
+- resolve non-latin char issue in generated OG images (#318)
+
+## v4.3.0 (2024-07-27)
+
+### Feat
+
+- support light/dark theme in code blocks (#327)
+- add number of posts config for home page (#281)
+- make heading links keyboard focusable (#275)
+- add JSON-LD structured data (#260)
+- add scroll indicator in blog posts (#249)
+
+### Fix
+
+- adding data-theme to tailwind config (#319)
+- avoid `undefined` when passing class-name as prop (#270)
+- add $CURRENT_TIMEZONE_OFFSET in custom code snippets (#264)
+- display `Updated` in posts only when modDatetime > pubDatetime (#258)
+- add SITE.title in PostDetails title tag for consistent look (#247)
+- add trailing slash to links to avoid extra redirects (#246)
+- update incorrect typo in predefined-color-schemes.md (#245)
+
+### Refactor
+
+- remove trailing commas in tsconfig.json (#325)
+- remove redundant role in article element (#323)
+- avoid using unnecessary class-name in the pagination component (#274)
+- update post detail script codes
+- update code formatting with prettier
+
+## [4.2.0](https://github.com/satnaing/astro-paper/compare/v4.1.0...v4.2.0) (2024-01-22)
+
+### Features
+
+* add heading links to PostDetails page ([#232](https://github.com/satnaing/astro-paper/issues/232)) ([742baff](https://github.com/satnaing/astro-paper/commit/742baff2c9bd47e0762f5d65f5b47a4d28014175))
+* hide posts in Prod with future pubDatetime  ([#234](https://github.com/satnaing/astro-paper/issues/234)) ([3efa05c](https://github.com/satnaing/astro-paper/commit/3efa05cc101688c32fc531af0122023d3ce82f08))
+
+### Bug Fixes
+
+* remove extra padding if lightAndDarkMode is false ([#230](https://github.com/satnaing/astro-paper/issues/230)) ([742314e](https://github.com/satnaing/astro-paper/commit/742314e0ac350a70ce1cc256e858c8de9c9153f6))
+* reduce margin-bottom on markdown images ([#235](https://github.com/satnaing/astro-paper/issues/235)) ([1331795](https://github.com/satnaing/astro-paper/commit/1331795a4965aab5c47581c223f32f3ea2cd71ab))
+* resolve broken line break in inline code ([#237](https://github.com/satnaing/astro-paper/issues/237)) ([ece0682](https://github.com/satnaing/astro-paper/commit/ece0682adce387f2a169185680cdf372a457e938))
+* remove recent posts section if there's no post ([#238](https://github.com/satnaing/astro-paper/issues/238)) ([629dbfd](https://github.com/satnaing/astro-paper/commit/629dbfda5b99a71e629dbbf1845c3ceba5ac97e0)), closes [#204](https://github.com/satnaing/astro-paper/issues/204)
+* update back button to redirect to home when no route history ([#241](https://github.com/satnaing/astro-paper/issues/241)) ([8f75f0a](https://github.com/satnaing/astro-paper/commit/8f75f0a5e75778a60e8030bb45b19289c0af502e))
+
+### Others
+
+* upgrade astro and other dependencies ([e903b69](https://github.com/satnaing/astro-paper/commit/e903b699cd947301256de1e62ae0ad2d1dcd3c2b))
+* update code formatting with prettier ([424c422](https://github.com/satnaing/astro-paper/commit/424c422392d836516bfbb6004a234a1a57930be1))
+* add astro extension in lint-staged code formatting ([d41bb69](https://github.com/satnaing/astro-paper/commit/d41bb69cd8f441caa773a07d911adb3ade54b493))
+* update outdated prettier script ([1281b93](https://github.com/satnaing/astro-paper/commit/1281b9340a6bebd67628a8d4c56f318701ffde47))
+
+## [4.1.0](https://github.com/satnaing/astro-paper/compare/v4.0.0...v4.1.0) (2024-01-10)
+
+### Features
+
+* update Astro and other dependencies ([f70a0b7](https://github.com/satnaing/astro-paper/commit/f70a0b78ed44350f6d1b00153ea0cc5b7d285043)) ([034dd39](https://github.com/satnaing/astro-paper/commit/034dd394abd4df5cb95fcfe975749cc535a6c05c))
+* add share links in blog post ([#215](https://github.com/satnaing/astro-paper/issues/215))
+* add copy buttons for code blocks ([#217](https://github.com/satnaing/astro-paper/issues/217))
+
+### Bug Fixes
+
+* resolve accessibility issues ([#226](https://github.com/satnaing/astro-paper/issues/226))
+* solve modDatetime type errors ([#214](https://github.com/satnaing/astro-paper/issues/214))
+* remove SocialObjects type and update SocialObjects type ([#225](https://github.com/satnaing/astro-paper/issues/225))
+
+### Others
+
+* adds blog post for how to add a social icon ([#221](https://github.com/satnaing/astro-paper/issues/221)) 
+* updates the hook post with a smarter updateHook ([#222](https://github.com/satnaing/astro-paper/issues/222))
+* update breadcrumbs delimiter to "»" ([#213](https://github.com/satnaing/astro-paper/issues/213))
+
+## [4.0.0](https://github.com/satnaing/astro-paper/compare/v3.0.0...v4.0.0) (2024-01-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* Astro v4 upgrade
+
+### Features
+
+* add code-snippets for content creation ([#206](https://github.com/satnaing/astro-paper/issues/206)) ([bb2f290](https://github.com/satnaing/astro-paper/commit/bb2f29008a96a0333e4c3adda202d20909728dfe))
+* add docker-compose file ([#174](https://github.com/satnaing/astro-paper/issues/174)) ([fb3fa98](https://github.com/satnaing/astro-paper/commit/fb3fa98936d76331869641014d5b4568a84d8d42)), closes [#172](https://github.com/satnaing/astro-paper/issues/172)
+* add image validation to schema ([e9d4303](https://github.com/satnaing/astro-paper/commit/e9d4303219bf312bc3955bb8af9aedb0eadb17cc))
+* add modified datetime in blog posts ([80e67a1](https://github.com/satnaing/astro-paper/commit/80e67a1dcad19394d7b466472f3c674470db8e0c)), closes [#134](https://github.com/satnaing/astro-paper/issues/134)
+* add pagination in tag posts ([#201](https://github.com/satnaing/astro-paper/issues/201)) ([581826a](https://github.com/satnaing/astro-paper/commit/581826a5affd03d12416a5ac7d28ed17d53eac8d)), closes [#152](https://github.com/satnaing/astro-paper/issues/152)
+* add transition effect if light/dark changes ([a060cb5](https://github.com/satnaing/astro-paper/commit/a060cb5c87f733c455ea247d72f88095f1ca769c))
+* add view transitions for card on search page ([#118](https://github.com/satnaing/astro-paper/issues/118)) ([6c7d04f](https://github.com/satnaing/astro-paper/commit/6c7d04fa12d006379157cf876c2826f606f124e9))
+* add ViewTransitions from Astro ([cbdaa59](https://github.com/satnaing/astro-paper/commit/cbdaa59baea1c5c5497227dd2fb276e8cf88b936)), closes [#96](https://github.com/satnaing/astro-paper/issues/96)
+* default post author to site author ([20c8970](https://github.com/satnaing/astro-paper/commit/20c89709ada7e7c3f49460d6690d02999ba86d17))
+* dynamically generate robots.txt ([6352353](https://github.com/satnaing/astro-paper/commit/63523534703c1f95ac070452001070e2c3f74d5d))
+* generate og image using templates ([3032c18](https://github.com/satnaing/astro-paper/commit/3032c18321dfd4f001bc86c094881219bd2e22b7))
+* implement back-to-top button in blog post page ([c526157](https://github.com/satnaing/astro-paper/commit/c526157118b69ff68e3a653eee68428a791a7d9f)), closes [#156](https://github.com/satnaing/astro-paper/issues/156)
+* og image routes ([300d014](https://github.com/satnaing/astro-paper/commit/300d014fd7a83f52020bdc21976de8487eb41f63))
+* replace slugified title with unslugified tag name ([#198](https://github.com/satnaing/astro-paper/issues/198)) ([b05b8fb](https://github.com/satnaing/astro-paper/commit/b05b8fb842b43f4f6462b425cb46d835579cbcfb)), closes [#179](https://github.com/satnaing/astro-paper/issues/179)
+* support custom canonical URLs ([#83](https://github.com/satnaing/astro-paper/issues/83)) ([4687bd5](https://github.com/satnaing/astro-paper/commit/4687bd516b16970fc4d163c1202b28f29818a582))
+* update theme-color tag on theme switch ([f253776](https://github.com/satnaing/astro-paper/commit/f25377674ebc10f496ef6e5729b931d61ec67832))
+
+
+### Bug Fixes
+
+* [#133](https://github.com/satnaing/astro-paper/issues/133) update LOCALE config to cover overall locales ([cd02b04](https://github.com/satnaing/astro-paper/commit/cd02b047d2b5e3b4a2940c0ff30568cdebcec0b8))
+* [#72](https://github.com/satnaing/astro-paper/issues/72) replace SITE.website with a URL in astro.config site value ([26ecd17](https://github.com/satnaing/astro-paper/commit/26ecd173ddec1075abb6ede9bbb62572b9f74b33))
+* anchor overflow on small screen size ([d025c91](https://github.com/satnaing/astro-paper/commit/d025c914d91a9b7969c8db4bd6a700723ef86a39))
+* **css:** text wrap in code blocks ([0c92492](https://github.com/satnaing/astro-paper/commit/0c92492959bed20f144d5d949116891d61c8e098))
+* decode unicode tag chars in breadcrumb ([#175](https://github.com/satnaing/astro-paper/issues/175)) ([058c790](https://github.com/satnaing/astro-paper/commit/058c790d26cbeab286679a8a8e3bad6c14042d6d))
+* get og image url correctly ([7f3edbd](https://github.com/satnaing/astro-paper/commit/7f3edbdecdce597d15e562e7d497d69af505d550))
+* **layout:** use 100svh for min-height on body instead of 100vh ([79d569d](https://github.com/satnaing/astro-paper/commit/79d569d053036f2113519f41b0d257523d035b76)), closes [#127](https://github.com/satnaing/astro-paper/issues/127)
+* og image src ([6dffcf3](https://github.com/satnaing/astro-paper/commit/6dffcf3cb36a0dab6549ee249fe426b4ee931b06))
+* prevent white flash in dark mode when navigate ([9eeb8fc](https://github.com/satnaing/astro-paper/commit/9eeb8fc76ecfd45b79ab716305f1916491649c95))
+* remove empty string as ogImage ([b03b722](https://github.com/satnaing/astro-paper/commit/b03b7223694b4c215c6fce0a45ed4f03178081f4))
+* resolve single-line code block wrapping issue ([#121](https://github.com/satnaing/astro-paper/issues/121)) ([0af3251](https://github.com/satnaing/astro-paper/commit/0af32518b343430dd8510470efd3806509337de7))
+* solve invisible text code block issue in light-mode ([#163](https://github.com/satnaing/astro-paper/issues/163)) ([64b3a28](https://github.com/satnaing/astro-paper/commit/64b3a286e6e3ff1dff7cf4ca0fc8fafc222cabcd))
+* sort posts in [tag] page ([#101](https://github.com/satnaing/astro-paper/issues/101)) ([b571816](https://github.com/satnaing/astro-paper/commit/b571816dcddc72a07147389090502c09025b28a6))
+* update auto-gen OG images to allow special char usage in title ([1933a6b](https://github.com/satnaing/astro-paper/commit/1933a6beae7b4e2558b808d1f8a5c124f1244138)), closes [#103](https://github.com/satnaing/astro-paper/issues/103) [#88](https://github.com/satnaing/astro-paper/issues/88)
+* update rss pubDate to prioritize modDatetime if exists ([e1514b4](https://github.com/satnaing/astro-paper/commit/e1514b41024bc10bcafcc4af548a6ebe0e093468))
+* update tailwind base styles config ([#116](https://github.com/satnaing/astro-paper/issues/116)) ([4a03558](https://github.com/satnaing/astro-paper/commit/4a0355865081d07d05d9d758f520e411952a1063))
+* update title of the blog nowrap ([87b3e5b](https://github.com/satnaing/astro-paper/commit/87b3e5b8cd7d424b3e43e6d5abed6d21195aa759))
+
+
+* build!(deps): upgrade Astro and related packages to v4 ([a1d3ddd](https://github.com/satnaing/astro-paper/commit/a1d3ddd18591843a35b3c05be762e1f8af1b8fb0)), closes [#187](https://github.com/satnaing/astro-paper/issues/187)
+
+## [3.0.0](https://github.com/satnaing/astro-paper/compare/v2.3.0...v3.0.0) (2023-09-25)
 
 ### ⚠ BREAKING CHANGES
 
