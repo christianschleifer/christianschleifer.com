@@ -73,13 +73,13 @@ Deployment is configured in:
 amplify.yml
 ```
 
-The Amplify build uses Node 22 and pnpm:
+The Amplify build uses Node 24 via `nvm` and installs with pnpm:
 
 ```yaml
 preBuild:
   commands:
-    - nvm install 22
-    - nvm use 22
+    - nvm install 24
+    - nvm use 24
     - npx --yes pnpm@10 install --frozen-lockfile
 build:
   commands:
