@@ -46,5 +46,11 @@
     "prettier-plugin-astro": "0.x",
     "prettier-plugin-tailwindcss": "0.x",
     "typescript": "6.x"
+  },
+  "pnpm": {
+    "overrides": {
+      "esbuild": "0.28.1",
+      "yaml": "2.9.0"
+    }
   }
 }
