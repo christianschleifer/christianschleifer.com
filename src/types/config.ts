@@ -36,12 +36,6 @@ interface PostsConfig {
 interface FeaturesConfig {
   /** Enable light/dark mode toggle. Defaults to true. */
   lightAndDarkMode?: boolean;
-  /**
-   * Generate dynamic OG images per post and provide `/og.png` when the static
-   * `public/{site.ogImage}` file is absent. When false, that file is required
-   * for the default layout OG image (build fails if missing).
-   */
-  dynamicOgImage?: boolean;
   /** Show back button on post detail pages. Defaults to true. */
   showBackButton?: boolean;
   /** "Edit page" link shown on post detail pages. */

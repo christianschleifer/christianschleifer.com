@@ -26,8 +26,6 @@
     "rehype-callouts": "2.x",
     "remark-collapse": "0.1.x",
     "remark-toc": "9.x",
-    "satori": "0.26.x",
-    "sharp": "0.34.x",
     "slugify": "1.x",
     "tailwindcss": "4.x"
   },
