@@ -4,6 +4,7 @@ export interface UIStrings {
     posts: string;
     tags: string;
     about: string;
+    cv: string;
     search: string;
   };
   post: {
@@ -28,6 +29,11 @@ export interface UIStrings {
     socialLinks: string;
     featured: string;
     recentPosts: string;
+    latestWriting: string;
+    readPosts: string;
+    viewCv: string;
+    aboutMe: string;
+    rssFeed: string;
     allPosts: string;
   };
   footer: {

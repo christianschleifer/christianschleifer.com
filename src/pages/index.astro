@@ -1,7 +1,6 @@
 ---
 import { getCollection } from "astro:content";
 import { getRelativeLocaleUrl } from "astro:i18n";
-import IconRss from "@/assets/icons/IconRss.svg";
 import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
@@ -37,35 +36,44 @@ const homePath = getRelativeLocaleUrl(locale, "");
       <h1 class="my-4 text-4xl font-bold sm:my-8 sm:text-5xl">
         Hi, I'm Christian Schleifer.
       </h1>
-      <a
-        target="_blank"
-        href={`${import.meta.env.BASE_URL.replace(/\/?$/, "/")}rss.xml`}
-        class="inline-block"
-        aria-label="RSS Feed"
-        title="RSS Feed"
-      >
-        <IconRss
-          width={20}
-          height={20}
-          class="stroke-accent scale-125 stroke-3 rtl:-rotate-90"
-        />
-        <span class="sr-only">RSS Feed</span>
-      </a>
-
-      <p>
-        Welcome to my personal blog where I write about programming and computer
-        science.
+      <p class="max-w-2xl text-lg leading-8">
+        Backend software engineer in Munich. I write about Rust, databases,
+        distributed systems, and the lower-level machinery behind software
+        systems.
       </p>
-      <p class="mt-2">
-        Check out my
+      <nav
+        class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2"
+        aria-label="Homepage links"
+      >
         <LinkButton
-          class="hover:text-accent underline decoration-dashed underline-offset-4"
+          class="underline decoration-dashed underline-offset-4"
           href={getRelativeLocaleUrl(locale, "about")}
         >
-          About Page
+          {t.home.aboutMe}
         </LinkButton>
-        if you want to know more about me.
-      </p>
+        <LinkButton
+          class="underline decoration-dashed underline-offset-4"
+          href={getRelativeLocaleUrl(locale, "cv")}
+        >
+          {t.home.viewCv}
+        </LinkButton>
+        <LinkButton
+          class="underline decoration-dashed underline-offset-4"
+          href={getRelativeLocaleUrl(locale, "posts")}
+        >
+          {t.home.readPosts}
+        </LinkButton>
+        <LinkButton
+          class="underline decoration-dashed underline-offset-4"
+          target="_blank"
+          rel="noopener noreferrer"
+          href={`${import.meta.env.BASE_URL.replace(/\/?$/, "/")}rss.xml`}
+          aria-label={t.home.rssFeed}
+          title={t.home.rssFeed}
+        >
+          {t.home.rssFeed}
+        </LinkButton>
+      </nav>
       {
         socials.length > 0 && (
           <div class="mt-4 flex max-sm:flex-col sm:items-center">
@@ -103,7 +111,7 @@ const homePath = getRelativeLocaleUrl(locale, "");
       recentPosts.length > 0 && (
         <section id="recent-posts" class="pt-12 pb-6">
           <h2 class="text-2xl font-semibold tracking-wide">
-            {t.home.recentPosts}
+            {t.home.latestWriting}
           </h2>
           <ul>
             {recentPosts.slice(0, postsConfig.perIndex).map(data => (

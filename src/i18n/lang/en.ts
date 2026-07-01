@@ -6,6 +6,7 @@ export default {
     posts: "Posts",
     tags: "Tags",
     about: "About",
+    cv: "CV",
     search: "Search",
   },
   post: {
@@ -30,6 +31,11 @@ export default {
     socialLinks: "Social Links",
     featured: "Featured",
     recentPosts: "Recent Posts",
+    latestWriting: "Latest Writing",
+    readPosts: "Read posts",
+    viewCv: "View CV",
+    aboutMe: "About me",
+    rssFeed: "RSS",
     allPosts: "All Posts",
   },
   footer: {
