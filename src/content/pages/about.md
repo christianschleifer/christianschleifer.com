@@ -3,13 +3,18 @@ title: "About"
 description: "A bit about Christian Schleifer and this blog."
 ---
 
-Welcome to my blog! I'm Christian, a 31-year-old software engineer based in Munich. Although I studied medicine and didn't pursue a formal
-education in computer science, I have developed a passion for technology and computer science concepts. Through this blog, I aim to share my
-journey of learning and exploring tech stuff I'm interested in.
+I'm Christian Schleifer, a backend software engineer based in Munich. I work on distributed backend systems, low-latency
+services, large-scale data processing, and the reliability work needed to keep production systems understandable and
+operable.
 
-How does the Linux kernel represent processes? How does virtual memory work? What are all these networking layers really about? How do
-database indices work? What is asynchronous I/O really about? Questions like these get me super excited. I love to peek behind abstractions
-and explore their actual implementation. Sometimes only on a conceptual level, sometimes with coding out some bare-bones implementations
-myself.
+Before software engineering, I studied medicine and completed a doctorate in cardiovascular research. That background
+still shapes how I work: I like careful diagnosis, root-cause analysis, and turning ambiguous problems into something
+concrete enough to reason about.
 
-I myself benefited a lot from reading blog posts which is why I hope this blog may benefit you as well.
+This blog is where I write about the systems topics I want to understand more deeply. How does the Linux kernel
+represent processes? How does virtual memory work? What are networking layers really doing? How do database indexes
+work? What is asynchronous I/O really about? I like looking behind abstractions, sometimes conceptually and sometimes by
+building small, bare-bones implementations myself.
+
+I have learned a lot from technical writing by others. This site is my way of contributing back and keeping notes in
+public.
