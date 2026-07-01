@@ -12,8 +12,8 @@ Deutschland
 
 #### Kontakt
 
-Email: christianschleifer@gmx.de  
-Telefon: 0176 84880604
+Email: chr.schleifer@gmail.com  
+Telefon: +49 176 84880604
 
 #### Verantwortlich für den Inhalt gem. §55 Abs. 2 RStV
 

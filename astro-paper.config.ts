@@ -31,7 +31,7 @@ export default defineAstroPaperConfig({
       name: "linkedin",
       url: "https://www.linkedin.com/in/christian-schleifer/",
     },
-    { name: "mail", url: "mailto:christianschleifer@gmx.de" },
+    { name: "mail", url: "mailto:chr.schleifer@gmail.com" },
   ],
   shareLinks: [
     { name: "whatsapp", url: "https://wa.me/?text=" },

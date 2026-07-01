@@ -103,7 +103,7 @@ Deutschland
 
 #### Fragen an den Datenschutzbeauftragten
 
-Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail (christianschleifer@gmx.de) oder wenden Sie sich direkt an die
+Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail (chr.schleifer@gmail.com) oder wenden Sie sich direkt an die
 für den Datenschutz verantwortliche Person:
 
 Christian Schleifer  
