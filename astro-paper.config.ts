@@ -30,7 +30,7 @@ export default defineAstroPaperConfig({
     { name: "github", url: "https://github.com/christianschleifer" },
     {
       name: "linkedin",
-      url: "https://www.linkedin.com/in/christian-schleifer/",
+      url: "https://www.linkedin.com/in/christianschleifer/",
     },
     { name: "mail", url: "mailto:chr.schleifer@gmail.com" },
   ],
