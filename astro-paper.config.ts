@@ -2,11 +2,11 @@ import { defineAstroPaperConfig } from "./src/types/config";
 
 export default defineAstroPaperConfig({
   site: {
-    url: "https://christianschleifer.com",
+    url: "https://www.christianschleifer.com",
     title: "Christian Schleifer",
     description: "Personal blog of Christian Schleifer",
     author: "Christian Schleifer",
-    profile: "https://christianschleifer.com/about",
+    profile: "https://www.christianschleifer.com/about",
     ogImage: "default-og.jpg",
     lang: "en",
     timezone: "Europe/Berlin",

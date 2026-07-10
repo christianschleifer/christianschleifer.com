@@ -5,7 +5,7 @@ Personal blog of Christian Schleifer, built with Astro and based on the AstroPap
 The site is deployed to AWS Amplify at:
 
 ```text
-https://christianschleifer.com
+https://www.christianschleifer.com
 ```
 
 ## Stack
